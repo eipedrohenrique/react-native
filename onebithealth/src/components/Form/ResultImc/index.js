@@ -11,7 +11,7 @@ function ResultImc(props) {
     }
 
     return(
-        <View style={styles.contextImx}>
+        <View style={styles.contextImc}>
             <View style={styles.boxSharebutton}>
                 {props.resultImc != null ?
                 <TouchableOpacity 
