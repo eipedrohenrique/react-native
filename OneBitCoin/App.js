@@ -4,7 +4,6 @@ import { StyleSheet, StatusBar, SafeAreaView, Platform } from 'react-native';
 import CurrentPrice from './src/components/CurrentPrice';
 import HistoryGraphic from './src/components/HistoryGraphic';
 import QuotationsList from './src/components/QuotationsList';
-import QuotationsItems from './src/components/QuotationsList/QuotationsItems';
 
 function addZero(number) {
   if(number <= 9) {
@@ -81,7 +80,7 @@ export default function App() {
       barStyle="light-content"
       />
       <CurrentPrice/>
-      <HistoryGraphic/>
+      <HistoryGraphic infoDataGraphic={coinsGraphicList}/>
       <QuotationsList filterDay={updateDay} listTransactions={coinsList} />
     </SafeAreaView>
   );
