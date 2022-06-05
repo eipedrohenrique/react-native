@@ -19,7 +19,11 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         fontWeight: "bold",
         fontSize: 14,
-    }
+    },
+    listQuotationBitcoins: {
+        paddingTop:10,
+        width: "100%",
+    },
 });
 
 export default styles

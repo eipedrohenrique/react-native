@@ -4,42 +4,42 @@ import QuotationsItems from "./QuotationsItems";
 import styles from "./style";
 
 export default function QuotationsList(props) {
-  const daysQuerey = props.filterDay
+  const daysQuery = props.filterDay
     return (
         <Fragment>
         <View style={styles.filters}>
             <TouchableOpacity
             style={styles.buttonQuery}
-            onPress={() => daysQuerey(7)}
+            onPress={() => daysQuery(7)}
             >
               <Text style={styles.textButtonQuery}>7D</Text>
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.buttonQuery}
-            onPress={() => daysQuerey(15)}
+            onPress={() => daysQuery(15)}
             >
               <Text style={styles.textButtonQuery}>15D</Text>
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.buttonQuery}
-            onPress={() => daysQuerey(30)}
+            onPress={() => daysQuery(30)}
             >
               <Text style={styles.textButtonQuery}>1M</Text>
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.buttonQuery}
-            onPress={() => daysQuerey(90)}
+            onPress={() => daysQuery(90)}
             >
               <Text style={styles.textButtonQuery}>3M</Text>
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.buttonQuery}
-            onPress={() => daysQuerey(180)}
+            onPress={() => daysQuery(180)}
             >
               <Text style={styles.textButtonQuery}>6M</Text>
             </TouchableOpacity>
         </View>
-        <ScrollView>
+        <ScrollView style={styles.listQuotationBitcoins}>
           <FlatList
             data={props.listTransactions}
             renderItem={({item})=>{
