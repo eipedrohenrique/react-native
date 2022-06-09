@@ -44,7 +44,7 @@ export default function App() {
         {minutes < 10 ? "0" + minutes : minutes}:
         {seconds < 10 ? "0" + seconds : seconds}
       </Text>
-      <View>
+      <View style={styles.buttonContainer}>
         <Button title='Start' onPress={startTimer}/>
         <Button title='Stop' onPress={stopTimer}/>
         <Button title='Clear' onPress={clear}/>
@@ -60,8 +60,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: "#0d0c1b",
   },
+
   textTimer: {
     fontSize: 50,
-  }
+    color: "#f5f5f5",
+    margin: 50,
+  },
+
+  buttonContainer: {
+    flexDirection: "row",
+    width: "50%",
+    justifyContent: "space-around",
+  },
 });
