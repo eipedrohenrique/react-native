@@ -12,6 +12,13 @@ export default function Forgot() {
                     style={{ width: '100%', height: '18%', top: '10%', }}
                     resizeMode="contain"
             />
+
+            <Image
+                source={require('../../img/logotwo.png')}
+                style={{ width: '100%', height: '13%', top: '8%', }}
+                resizeMode="contain"
+            />
+
             <View style={style.containerHeader}>
                 <TextInput
                     placeholder="E-mail"

@@ -13,6 +13,15 @@ export default function SignIn() {
                     style={{ width: '100%', height: '18%', top: '10%', }}
                     resizeMode="contain"
             />
+
+            <Image
+                source={require('../../img/logotwo.png')}
+                style={{ width: '100%', height: '13%', top: '8%', }}
+                resizeMode="contain"
+            />
+
+            <Text style={style.text}>customer</Text>
+
             <View style={style.containerHeader}>
                 <TextInput
                     placeholder="E-mail"
@@ -48,7 +57,7 @@ const style = StyleSheet.create({
     },
 
     containerHeader: {
-        marginTop: '25%',
+        marginTop: '5%',
         marginBottom: '8%',
         paddingStart: '5%',
         paddingEnd: '5%'
@@ -88,16 +97,25 @@ const style = StyleSheet.create({
     },
 
     buttonRegister: {
+        height: 45,
         borderColor: '#29ABE2',
-        borderWidth: 1,
-        width: '100%',
+        borderWidth: 2,
+        width: 389,
+        left: -17,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '90%',
+        marginTop: '60%',
     },
 
     buttonTextTwo: {
         color: '#29ABE2',
         fontSize: 20
+    },
+
+    text: {
+        alignSelf: 'center',
+        color: '#868E96',
+        marginTop: '10%',
+        fontSize: 20, 
     }
 })
