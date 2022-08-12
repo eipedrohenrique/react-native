@@ -52,7 +52,7 @@ export default function SignIn() {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={style.iconthree} onPress={ () => setHidePass(!hidePass) }>
-                    <Icon name="eye-off" size={25} color="#000"/>
+                    <Icon name="eye-off" size={25} color="#868E96"/>
                 </TouchableOpacity>
 
             </View>
@@ -132,17 +132,20 @@ const style = StyleSheet.create({
         position: 'absolute',
         left: 30,
         marginTop: 10,
+        color: '#868E96'
     },
 
     icontwo: {
         position: 'absolute',
         left: 30,
         marginTop: 67,
+        color: '#868E96'
     },
 
     iconthree: {
         position: 'absolute',
         left: 340,
         marginTop: 67,
+        color: '#868E96'
     },
 })

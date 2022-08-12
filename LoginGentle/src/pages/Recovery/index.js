@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default function Recovery() {
+    const [hidePass, setHidePass] = useState(true)
+    const [hidePasst, setHidePasst] = useState(true)
+    const navigation = useNavigation();
     
     return (
         <View style={style.containerHeader}>
                 <TextInput
                     placeholder="New password"
                     style={style.input}
-                    secureTextEntry={true}
+                    secureTextEntry={hidePass}
                 />
 
                 <TextInput
                     placeholder="Confirm new password"
                     style={style.input}
-                    secureTextEntry={true}
+                    secureTextEntry={hidePasst}
                 />
+
+                <Text style={style.text}>Recovery password</Text>
+
+                <TouchableOpacity style={style.icon} onPress={ () => navigation.navigate('Forgot')}>
+                    <Icon name="arrow-left" size={25} color="#29ABE2"/>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={style.icontwo} onPress={ () => setHidePass(!hidePass) }>
+                    <Icon name="eye-off" size={25} color="#868E96"/>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={style.iconthree} onPress={ () => setHidePasst(!hidePasst) }>
+                    <Icon name="eye-off" size={25} color="#868E96"/>
+                </TouchableOpacity>
 
                 <TouchableOpacity style={style.button}>
                     <Text style={style.buttonText}>Recovery</Text>
@@ -26,7 +45,7 @@ export default function Recovery() {
 
 const style = StyleSheet.create({
     containerHeader: {
-        marginTop: '25%',
+        marginTop: '27%',
         marginBottom: '8%',
         paddingStart: '5%',
         paddingEnd: '5%'
@@ -55,5 +74,34 @@ const style = StyleSheet.create({
     buttonText: {
         color: '#fff',
         fontSize: 25,
+    },
+
+    icon: {
+        left: 1,
+        top: -200,
+        color: '#29ABE2'
+    },
+
+    icontwo: {
+        position: 'absolute',
+        left: 340,
+        marginTop: 10,
+        color: '#868E96'
+    },
+
+    iconthree: {
+        position: 'absolute',
+        left: 340,
+        marginTop: 67,
+        color: '#868E96'
+    },
+
+    text: {
+        alignSelf: 'center',
+        color: '#29ABE2',
+        top: -175,
+        fontSize: 20,
+        right: 50,
+        fontWeight: 'bold'
     },
 })

@@ -1,4 +1,7 @@
+import React from "react";
+import { StyleSheet } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 
 import Welcome from '../pages/Welcome'
 import SignIn from '../pages/SignIn'
@@ -25,12 +28,20 @@ export default function Routes() {
             <Stack.Screen
                 name="Forgot"
                 component={Forgot}
+                options={{ headerShown: false }}
             />
 
             <Stack.Screen
                 name="Recovery"
                 component={Recovery}
+                options={{ headerShown: false }}
             />
         </Stack.Navigator>
-    )
+    );
 }
+
+const style = StyleSheet.create({
+    container: {
+        backgroundColor: '#29ABE2'
+    }
+})

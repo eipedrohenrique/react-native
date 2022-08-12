@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from "react-native";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { useNavigation } from '@react-navigation/native';
 
 export default function Forgot() {
@@ -19,11 +20,19 @@ export default function Forgot() {
                 resizeMode="contain"
             />
 
+            <Text style={style.text}>customer</Text>
+
             <View style={style.containerHeader}>
                 <TextInput
                     placeholder="E-mail"
                     style={style.input}
                 />
+
+                <TouchableOpacity style={style.icontwo} onPress={ () => navigation.navigate('SignIn')}>
+                    <Icon name="arrow-left" size={25} color="#29ABE2"/>
+                </TouchableOpacity>
+
+                <Icon style={style.icon} name="email" size={25} color="#000"/>
 
                 <TouchableOpacity style={style.button} onPress={ () => navigation.navigate('Recovery')}>
                     <Text style={style.buttonText}>Send</Text>
@@ -43,7 +52,7 @@ const style = StyleSheet.create({
     },
 
     containerHeader: {
-        marginTop: '25%',
+        marginTop: '5%',
         marginBottom: '8%',
         paddingStart: '5%',
         paddingEnd: '5%'
@@ -56,7 +65,7 @@ const style = StyleSheet.create({
         borderColor:'#868E96',
         borderWidth: 1,
         borderRadius: 8,
-        paddingLeft: 10
+        paddingLeft: 40
     },
 
     button: {
@@ -64,7 +73,7 @@ const style = StyleSheet.create({
         width: '100%',
         borderRadius: 8,
         paddingVertical: 8,
-        marginTop: 14,
+        marginTop: -15,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -83,5 +92,25 @@ const style = StyleSheet.create({
     tokenTwo: {
         color: '#868E96',
         textAlign: 'center',
+    },
+
+    icon: {
+        position: 'absolute',
+        left: 30,
+        marginTop: 10,
+        color: '#868E96'
+    },
+
+    text: {
+        alignSelf: 'center',
+        color: '#868E96',
+        marginTop: '10%',
+        fontSize: 20, 
+    },
+
+    icontwo: {
+        left: 1,
+        top: -340,
+        color: '#29ABE2'
     },
 })
