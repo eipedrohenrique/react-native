@@ -13,6 +13,13 @@ export default function Welcome() {
                     style={{ width: '60%' }}
                     resizeMode="contain"
                 />
+
+                <Image
+                source={require('../../img/logotwo.png')}
+                style={{ width: '100%', height: '13%', top: '18%', }}
+                resizeMode="contain"
+                />
+
             </View>
   
             <View>
@@ -31,7 +38,7 @@ const styles = StyleSheet.create({
 
     containerLogo:{
         flex:2,
-        justifyContent:'center',
+        
         alignItems: 'center',
     }
 })

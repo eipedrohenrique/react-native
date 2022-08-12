@@ -86,7 +86,7 @@ const style = StyleSheet.create({
         backgroundColor: '#29ABE2',
         width: '100%',
         borderRadius: 8,
-        paddingVertical: 8,
+        paddingVertical: 10,
         marginTop: 14,
         justifyContent: 'center',
         alignItems: 'center'
@@ -110,10 +110,10 @@ const style = StyleSheet.create({
         width: 393,
         left: -20,
         borderColor: '#29ABE2',
-        borderWidth: 2,
+        borderWidth: 3,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '55%',
+        marginTop: '54%',
     },
 
     buttonTextTwo: {

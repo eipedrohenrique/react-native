@@ -24,6 +24,9 @@ export default function Recovery() {
 
                 <Text style={style.text}>Recovery password</Text>
 
+                <Icon style={style.iconfour} name="lock" size={25} color="#000"/>
+                <Icon style={style.iconfive} name="lock" size={25} color="#000"/>
+
                 <TouchableOpacity style={style.icon} onPress={ () => navigation.navigate('Forgot')}>
                     <Icon name="arrow-left" size={25} color="#29ABE2"/>
                 </TouchableOpacity>
@@ -58,14 +61,14 @@ const style = StyleSheet.create({
         borderColor:'#868E96',
         borderWidth: 1,
         borderRadius: 8,
-        paddingLeft: 10
+        paddingLeft: 40
     },
 
     button: {
         backgroundColor: '#29ABE2',
         width: '100%',
         borderRadius: 8,
-        paddingVertical: 8,
+        paddingVertical: 10,
         marginTop: 450,
         justifyContent: 'center',
         alignItems: 'center'
@@ -78,7 +81,7 @@ const style = StyleSheet.create({
 
     icon: {
         left: 1,
-        top: -200,
+        top: -195,
         color: '#29ABE2'
     },
 
@@ -96,10 +99,24 @@ const style = StyleSheet.create({
         color: '#868E96'
     },
 
+    iconfour: {
+        position: 'absolute',
+        left: 30,
+        marginTop: 10,
+        color: '#868E96'
+    },
+
+    iconfive: {
+        position: 'absolute',
+        left: 30,
+        marginTop: 66,
+        color: '#868E96'
+    },
+
     text: {
         alignSelf: 'center',
         color: '#29ABE2',
-        top: -175,
+        top: -170,
         fontSize: 20,
         right: 50,
         fontWeight: 'bold'
