@@ -14,6 +14,7 @@ export default function Welcome() {
                     resizeMode="contain"
                 />
             </View>
+  
             <View>
                 <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('SignIn')}>
                     <Text style={styles.buttonText}>Acessar</Text>

@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from "react-native";
 
 export default function Recovery() {
+    
     return (
         <View style={style.containerHeader}>
                 <TextInput
@@ -14,7 +15,6 @@ export default function Recovery() {
                     placeholder="Confirm new password"
                     style={style.input}
                     secureTextEntry={true}
-                    
                 />
 
                 <TouchableOpacity style={style.button}>

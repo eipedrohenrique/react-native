@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default function SignIn() {
+    const [hidePass, setHidePass] = useState(true)
     const navigation = useNavigation();
     
     return (
@@ -31,8 +32,12 @@ export default function SignIn() {
                 <TextInput
                     placeholder="Password"
                     style={style.input}
-                    secureTextEntry={true}
+                    secureTextEntry={hidePass}
                 />
+
+                <Icon style={style.icon} name="email" size={25} color="#000"/>
+                <Icon style={style.icontwo} name="lock" size={25} color="#000"/>
+                
 
                 <TouchableOpacity style={style.button}>
                     <Text style={style.buttonText}>SignIn</Text>
@@ -44,6 +49,10 @@ export default function SignIn() {
 
                 <TouchableOpacity style={style.buttonRegister}>
                     <Text style={style.buttonTextTwo}>Register Now</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={style.iconthree} onPress={ () => setHidePass(!hidePass) }>
+                    <Icon name="eye-off" size={25} color="#000"/>
                 </TouchableOpacity>
 
             </View>
@@ -70,7 +79,7 @@ const style = StyleSheet.create({
         borderColor:'#868E96',
         borderWidth: 1,
         borderRadius: 8,
-        paddingLeft: 10
+        paddingLeft: 40
     },
 
     button: {
@@ -97,14 +106,14 @@ const style = StyleSheet.create({
     },
 
     buttonRegister: {
-        height: 45,
+        height: 65,
+        width: 393,
+        left: -20,
         borderColor: '#29ABE2',
         borderWidth: 2,
-        width: 389,
-        left: -17,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '60%',
+        marginTop: '55%',
     },
 
     buttonTextTwo: {
@@ -117,5 +126,23 @@ const style = StyleSheet.create({
         color: '#868E96',
         marginTop: '10%',
         fontSize: 20, 
-    }
+    },
+
+    icon: {
+        position: 'absolute',
+        left: 30,
+        marginTop: 10,
+    },
+
+    icontwo: {
+        position: 'absolute',
+        left: 30,
+        marginTop: 67,
+    },
+
+    iconthree: {
+        position: 'absolute',
+        left: 340,
+        marginTop: 67,
+    },
 })
